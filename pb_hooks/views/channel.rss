@@ -1,0 +1,16 @@
+{{ define "channel-element"}}
+<channel>
+    <!-- required fields -->
+    <title>{{.name}}</title>
+    <description>{{.description}}</description>
+    <link>{{.link}}</link>
+    <!-- optional fields -->
+    <ttl>{{"604800"}}</ttl>
+    <language>{{.language}}</language>
+    <!-- itunes specific -->
+    <itunes:image>{{.image}}</itunes:image>    
+    <itunes:category text="{{.categories}}" />
+    <itunes:explicit/>
+    {{ range}}
+</channel>
+{{end}}

@@ -1,0 +1,20 @@
+services:
+  popod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - ARG POCKETBASE_VERSION=0.20.3
+        - ARG TARGETOS=linux
+        - ARG TARGETARCH=amd64
+    #command: serve --http 0.0.0.0:80 --dev
+    ports:
+      - 80:80
+    volumes:
+      - ./pb_public:/pocketbase/pb_public:ro
+      - ./pb_hooks:/pocketbase/pb_hooks:ro
+      - ./pb_migrations:/pocketbase/pb_migrations:rw
+      - pb_data:/pocketbase/pb_data:rw
+
+volumes:
+  pb_data: {}
