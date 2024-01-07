@@ -1,0 +1,7 @@
+{{define "episode"}}
+    <item>
+        <name>{{.name}}</name>
+        <description>{{.description}}</description>
+        <enclosure url="{{.media}}"/>
+    </item>
+{{end}}

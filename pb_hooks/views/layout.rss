@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+{{`<?xml version="1.0" encoding="UTF-8"?>` | raw}}
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-{{block "channel-element" .}}{{end}}
+{{block "channel" .}}{{end}}
 </rss>
