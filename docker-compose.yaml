@@ -4,13 +4,13 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - ARG POCKETBASE_VERSION=0.20.3
-        - ARG TARGETOS=linux
-        - ARG TARGETARCH=amd64
+        - POCKETBASE_VERSION=0.20.3
+        - TARGETOS=linux
+        - TARGETARCH=amd64
     # Rewrite command for development mode
     command: serve --http 0.0.0.0:80 --dev --hooksWatch
     ports:
-      - 80:80
+      - 8090:80
     volumes:
       - ./pb_public:/pocketbase/pb_public:ro
       - ./pb_hooks:/pocketbase/pb_hooks:ro
